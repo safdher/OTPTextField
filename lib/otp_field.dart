@@ -103,7 +103,21 @@ class _OTPTextFieldState extends State<OTPTextField> {
       _textControllers[i] = new TextEditingController();
 
     return Container(
-      width: widget.fieldWidth,
+          width: widget.fieldWidth,
+          height: widget.fieldWidth,
+          decoration: BoxDecoration(
+        color: Color(0xfff5f5f5),
+        borderRadius: BorderRadius.circular(10),
+        boxShadow: [
+          BoxShadow(
+            color: Color(0x57aeaed8),
+            offset: Offset(0, 10),
+            blurRadius: 32,
+            spreadRadius: 0,
+          ),
+        ],
+      ),
+      alignment: Alignment.center,
       child: TextField(
         controller: _textControllers[i],
         keyboardType: widget.keyboardType,
@@ -113,10 +127,12 @@ class _OTPTextFieldState extends State<OTPTextField> {
         focusNode: _focusNodes[i],
         obscureText: widget.obscureText,
         decoration: InputDecoration(
+            isDense: true,
             counterText: "",
-            border: widget.fieldStyle == FieldStyle.box
-                ? OutlineInputBorder(borderSide: BorderSide(width: 2.0))
-                : null),
+            // border: widget.fieldStyle == FieldStyle.box
+            //     ? OutlineInputBorder(borderSide: BorderSide(width: 2.0),gapPadding: 0,borderRadius:BorderRadius.all(Radius.circular( widget.fieldWidth * 0.25)) )
+            //     : null),
+            border: InputBorder.none,),
         onChanged: (String str) {
           // Check if the current value at this position is empty
           // If it is move focus to previous text field.

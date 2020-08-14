@@ -33,12 +33,12 @@ class _MyHomePageState extends State<MyHomePage> {
       body: Center(
         child: OTPTextField(
           length: 5,
-          width: MediaQuery.of(context).size.width,
+          width: MediaQuery.of(context).size.width * 0.7,
           textFieldAlignment: MainAxisAlignment.spaceAround,
-          fieldWidth: 50,
-          fieldStyle: FieldStyle.underline,
+          fieldWidth:40,
+          fieldStyle: FieldStyle.box,
           style: TextStyle(
-            fontSize: 17
+            fontSize: 10
           ),
           onCompleted: (pin) {
             print("Completed: " + pin);
