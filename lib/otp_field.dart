@@ -106,17 +106,21 @@ class _OTPTextFieldState extends State<OTPTextField> {
           width: widget.fieldWidth,
           height: widget.fieldWidth,
           decoration: BoxDecoration(
-        color: Color(0xfff5f5f5),
-        borderRadius: BorderRadius.circular(10),
-        boxShadow: [
-          BoxShadow(
-            color: Color(0x57aeaed8),
-            offset: Offset(0, 10),
-            blurRadius: 32,
-            spreadRadius: 0,
+            color: Colors.white,
+            border: Border.all(
+              color: Color(0xffe2e2e2),
+              width: 1,
+            ),
+            borderRadius: BorderRadius.circular(14),
+            boxShadow: [
+              BoxShadow(
+                color: Color(0x08000000),
+                offset: Offset(0, 3),
+                blurRadius: 15,
+                spreadRadius: 0,
+              ),
+            ],
           ),
-        ],
-      ),
       alignment: Alignment.center,
       child: TextField(
         controller: _textControllers[i],

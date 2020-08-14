@@ -32,10 +32,10 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       body: Center(
         child: OTPTextField(
-          length: 5,
+          length: 6,
           width: MediaQuery.of(context).size.width * 0.7,
           textFieldAlignment: MainAxisAlignment.spaceAround,
-          fieldWidth:40,
+          fieldWidth:30,
           fieldStyle: FieldStyle.box,
           style: TextStyle(
             fontSize: 10
