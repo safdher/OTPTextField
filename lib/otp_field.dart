@@ -111,7 +111,7 @@ class _OTPTextFieldState extends State<OTPTextField> {
               color: Color(0xffe2e2e2),
               width: 1,
             ),
-            borderRadius: BorderRadius.circular(14),
+            borderRadius: BorderRadius.circular(widget.fieldWidth*0.25),
             boxShadow: [
               BoxShadow(
                 color: Color(0x08000000),
